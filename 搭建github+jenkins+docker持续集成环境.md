@@ -1,4 +1,4 @@
-使用jenkins+github+docker是一个很常用的持续集成、持续交付方案了，这篇文章描述了搭建这套系统的流程，记录了一些坑点。注意，把jenkins安装在docker内需要有至少两台主机。
+使用jenkins+github+docker是一个很常用的持续集成、持续交付方案了，这篇文章描述了搭建这套系统的流程，记录了一些坑点。
 
 # 配置github
 1. 在'setting'里找到配置SSH key的地方：[https://github.com/settings/keys](https://github.com/settings/keys)
@@ -56,11 +56,13 @@ $ docker images
 $ docker tag jenkins/jenkins:lts jenkins:lts
 $ docker images
 
-# 容器跑起来
+# 容器跑起来，映射目录
 $ docker run -itd -p 8080:8080 -p 50000:50000 --name jenkins --privileged=true -v /home/jenkins:/var/jenkins_home jenkins:lts
 ```
 这时候用 ip:8080 就可以访问了，进去以后设置好初始admin账户密码，插件选推荐就行了。
 
 # 配置Jenkins
 1. 左侧'系统管理'-右侧'系统设置'，找github服务器，添加一个，添加凭据，凭据类型选secret text，凭据添刚才github生成的access_token，id不用填，保存，勾上manage hooks，然后点连接测试，通过即可。
-2. 新建个任务（job），把配置都填好，shell脚本写写好即可。
+2. 新建个任务（job），把配置都填好，shell脚本写好即可。
+
+至此，github+jenkins+docker的环境就搭好了，随后可以在jenkins中执行预先编写好的makefile和dockerfile来打包docker镜像和部署应用，本文不赘述makefile和dockerfile等的具体使用方法。
