@@ -26,7 +26,7 @@ RUN npm install -g node-gyp \
 ```
 
 > ⚠️ 注意：
-> 如果依赖已经装全任无法成功安装，可以尝试调整 nodejs 或 canvas 版本。
+> 如果依赖已经装全仍无法成功安装，可以尝试调整 nodejs 或 canvas 版本。
 
 安装完毕之后，运行项目测试绘图，报 `symbol not found` 错误，搜索 issue 和错误提示后，猜测是和项目中已有的 shape.js 冲突导致，移除全部 shape 相关代码，测试绘图，成功运行。
 
