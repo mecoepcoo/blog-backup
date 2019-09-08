@@ -20,6 +20,12 @@
 - 优化开发体验
 - 一些优化项目性能的建议
 
+阅读这个系列的文章需要具备的条件：
+- 你使用过`vue`，`react`或`angular`等任意一种前端框架
+- 你了解过`vue-cli`，`create-react-app`，`angular-cli`等任意一种脚手架生成工具
+- 你了解`webpack`的基本原理或用法
+- 你有生产环境代码的开发经验，了解生产环境中的代码与自娱自乐代码的区别
+
 > Why not [create-react-app](https://create-react-app.dev/)?
 > 
 > 笔者使用**CRA**新建项目时，觉得自定义程度不够。尝试过 `react-app-rewired + customize-cra` 的方案，还是觉得异常繁琐，而且会消耗额外的维护精力，**鲁迅说**：青年应当有朝气，敢作为，遂自行搭建一个 boilerplate 。
@@ -147,7 +153,7 @@ $ npm i -D webpack webpack-cli webpack-dev-server webpack-merge
 
 在 config 目录下新建几个文件：`config.js`, `webpack.base.js`, `webpack.prod.js`, `webpack.dev.js`, `build.js`
 
-先配置一些通用的：
+先抽取一些通用的配置：
 ```javascript
 // config/config.js
 const path = require('path');
@@ -198,6 +204,7 @@ $ npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel
 $ npm i core-js@2 # babel的按需引入依赖
 $ npm i -D @babel/plugin-proposal-class-properties # 能够在class中自动绑定this的指向
 $ npm i -D typescript awesome-typescript-loader # 处理ts，主要就靠它
+$ npm i -D html-loader html-webpack-plugin # 顺便把html的支持做好
 ```
 
 用了ts，就要有一个tsconfig配置，在根目录新建 `tsconfig.json`：
@@ -241,11 +248,16 @@ $ npm i -D typescript awesome-typescript-loader # 处理ts，主要就靠它
 ```javascript
 // webpack.base.js
 const APP_PATH = path.resolve(__dirname, '../src');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module: {
   rules: [
     {
       oneOf: [
+        {
+          test: /\.(html)$/,
+          loader: 'html-loader'
+        },
         {
           test: /\.(j|t)sx?$/,
           include: APP_PATH,
@@ -271,7 +283,15 @@ module: {
       ]
     }
   ]
-}
+},
+plugins: [
+  new HtmlWebpackPlugin({
+    inject: true,
+    template: config.indexPath,
+    showErrors: true
+  }),
+],
+optimization: {}
 ```
 
 为了以后开发时引入路径方便，我们加个路径别名的配置，需要改webpack配置和tsconfig两处：
