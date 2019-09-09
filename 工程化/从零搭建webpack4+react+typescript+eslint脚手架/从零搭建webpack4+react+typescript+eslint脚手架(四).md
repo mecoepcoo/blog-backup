@@ -77,6 +77,7 @@ module.exports = merge.smart(baseWebpackConfig, {
 
 # 自定义多环境
 一般来说，我们在开发应用的时候会面临多个环境差异的问题，例如，我们有：
+
 - 一个开发环境，提交代码即可立刻看到效果，它的接口地址可能是`http://dev-api.tianzhen.tech`
 - 一个测试环境，它需要保持一定程度的稳定性，每隔一小时发布一次新版本，接口地址可能是：`https://t1-api.tianzhen.tech`
 - 预发布环境，它与生产环境共享持久化数据，在这个环境做最后一次检查，等待发布
@@ -188,7 +189,7 @@ plugins: [
 
 把同样的配置，分别配置到`webpack.prod.js`和`webpack.dev.js`中，然后运行对应打包命令，就可以看到项目中成功注入了环境变量。例如，想要使用`.env.dev`中的变量，则打包命令中增加参数`--env=dev`即可，配置将由`.env.dev.local`，`.env.dev`，`.env.local`，`.env`合并覆盖生成。
 
-> webpack根据`NODE_ENV`的值来自动选择`production`或`development`模式编译，因此，如果没有必须要求，尽量不要以`NODE_ENV`的值做为打包环境依据，否则就要自行处理跟复杂的webpack配置。
+> webpack根据`NODE_ENV`的值来自动选择`production`或`development`模式编译，因此，如果没有必须要求，尽量不要以`NODE_ENV`的值做为打包环境依据，否则就要自行处理更复杂的webpack配置。
 
 # preload，prefetch
 preload和prefetch是一组能够预读资源，优化用户体验的工具，这里给出一个在首页预读字体和图片的例子，来演示它们结合webpack的使用方法，详见[文档](https://github.com/GoogleChromeLabs/preload-webpack-plugin)。

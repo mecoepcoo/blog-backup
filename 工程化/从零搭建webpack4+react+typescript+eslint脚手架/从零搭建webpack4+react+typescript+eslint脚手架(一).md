@@ -1,7 +1,8 @@
 # 引言
 > 项目github仓库地址： [https://github.com/mecoepcoo/ts-react-boilerplate](https://github.com/mecoepcoo/ts-react-boilerplate)
-> 
+
 这个系列的文章主要讲述如何从一个空目录建立**webpack+react+typescript+eslint**脚手架，书写此文时各主要工具的版本为：
+
 - webpack `v4`
 - react `v16.9`
 - typescript `v3.5`
@@ -9,6 +10,7 @@
 - eslint `v6.2`
 
 本文涉及的内容大致包含：
+
 - webpack的配置
 - 对静态资源（图片，模板等）的处理
 - 使react项目支持typescript，eslint，prettier等工具
@@ -21,6 +23,7 @@
 - 一些优化项目性能的建议
 
 阅读这个系列的文章需要具备的条件：
+
 - 你使用过`vue`，`react`或`angular`等任意一种前端框架
 - 你了解过`vue-cli`，`create-react-app`，`angular-cli`等任意一种脚手架生成工具
 - 你了解`webpack`的基本原理或用法
@@ -41,7 +44,9 @@ $ npm init
 ```
 
 新建如下目录结构：
+
 react-project
+
 - config `打包配置`
 - public `静态文件夹`
   - index.html
