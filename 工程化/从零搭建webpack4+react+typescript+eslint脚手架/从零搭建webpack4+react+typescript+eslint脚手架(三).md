@@ -89,8 +89,7 @@ optimization: {
   }
 }
 ```
-
-# 压缩代码
+# 压缩代码（2019/9/18更新）
 通过使用打包分析工具，我们会发现打出来的包都很大，远不能满足生产环境的体积要求，因此还需要对代码进行压缩。
 
 安装依赖：
@@ -166,3 +165,28 @@ optimization: {
 ```
 
 运行打包命令，查看打包好的文件，可以看到代码都被压缩好了。
+
+## 使用terser
+由于`uglify-es`已经停止维护，所以改用目前比较流行的`terser`来压缩js代码。我们仅需做几处简单的修改。
+
+首先安装依赖：
+```bash
+$ npm i -D terser-webpack-plugin
+```
+
+然后改写`webpack.prod.js`即可:
+```javascript
+// const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
+optimization: {
+  minimizer: [
+    // new UglifyjsWebpackPlugin({
+    //   sourceMap: config.productionJsSourceMap
+    // })
+    new TerserPlugin({
+      sourceMap: config.productionJsSourceMap
+    })
+  ]
+}
+```
