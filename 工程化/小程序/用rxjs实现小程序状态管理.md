@@ -7,6 +7,9 @@ rxjs学习资料：
 - 官网文档[https://rxjs.dev/](https://rxjs.dev/)
 - [学习rxjs操作符](https://rxjs-cn.github.io/learn-rxjs-operators/about/) 这篇文章介绍了低版本rxjs的操作符，很实用
 
+# 实现原理
+
+
 # 引入rxjs
 我们尽量避免多余的构建工具，直接使用umd版本的rxjs，下载地址：[https://unpkg.com/rxjs/bundles/rxjs.umd.min.js](https://unpkg.com/rxjs/bundles/rxjs.umd.min.js)，下载好后，把它放在`lib`目录中。
 
