@@ -1,3 +1,15 @@
+---
+title: 搭建github+jenkins+docker持续集成环境
+date: 2018/12/1 23:15:00
+categories: 
+- 云容器
+tags: 
+- 云容器
+- docker
+- 开发环境
+- CI/CD
+---
+
 使用jenkins+github+docker是一个很常用的持续集成、持续交付方案了，这篇文章描述了搭建这套系统的流程，记录了一些坑点。
 
 # 配置github

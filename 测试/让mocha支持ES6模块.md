@@ -1,3 +1,13 @@
+---
+title: 让mocha支持ES6模块
+date: 2018/9/26 21:00:00
+categories: 
+- 测试
+tags: 
+- 测试
+- 工程化
+---
+
 `mocha`是比较常用的node测试框架，但是只支持`commonjs`模块，要让`mocha`支持ES6模块，需要`babel`的帮助。
 
 书写本文时用到的工具版本为：
