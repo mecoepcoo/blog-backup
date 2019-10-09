@@ -1,3 +1,15 @@
+---
+title: node-canvas本地与docker安装
+date: 2019/7/13 22:48:00
+categories: 
+- 疑难杂症
+tags: 
+- 云容器
+- docker
+- nodejs
+- 疑难杂症
+---
+
 node-canvas 是 node 环境用来绘制图形的工具，我在 windows 10 环境和 docker 中 node-alpine 安装此工具时遇到了一些困难，以此文记录 trouble shooting 经历。
 
 # docker 安装
