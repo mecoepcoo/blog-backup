@@ -1,3 +1,15 @@
+---
+title: 使用docker部署mysql本地开发环境
+date: 2019/10/1 12:05:00
+categories: 
+- 云容器
+tags: 
+- 云容器
+- docker
+- mysql
+- 开发环境
+---
+
 本文介绍如何使用docker在本地搭建一个简单的mysql开发环境。
 
 # 准备工作
