@@ -1,3 +1,14 @@
+---
+title: 同步你的vs-code配置
+date: 2019/5/2 21:11:00
+categories: 
+- 开发环境
+tags: 
+- IDE
+- vscode
+- 开发环境
+---
+
 在不同的设备上使用 [vs code](https://code.visualstudio.com/)，配置可能会不一样，比如eslint工具，各种插件的配置。使用 [vs code](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) 的 Settings Sync 插件就可以简单地同步配置。
 
 这个插件的原理其实就是利用 [github gist](https://gist.github.com/)（代码片段功能）来保存和同步配置信息。
