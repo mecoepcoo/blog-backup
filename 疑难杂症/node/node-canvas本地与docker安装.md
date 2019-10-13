@@ -1,6 +1,7 @@
 ---
 title: node-canvas本地与docker安装
 date: 2019/7/13 22:48:00
+updated: 2019/7/13 22:48:00
 categories: 
 - 疑难杂症
 tags: 

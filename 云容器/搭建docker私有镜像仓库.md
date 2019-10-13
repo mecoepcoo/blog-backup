@@ -1,6 +1,7 @@
 ---
 title: 搭建docker私有镜像仓库
 date: 2019/2/6 20:00:00
+updated: 2019/2/6 20:00:00
 categories: 
 - 云容器
 tags: 

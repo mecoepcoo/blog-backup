@@ -1,6 +1,7 @@
 ---
 title: 搭建github+jenkins+docker持续集成环境
 date: 2018/12/1 23:15:00
+updated: 2018/12/1 23:15:00
 categories: 
 - 云容器
 tags: 
