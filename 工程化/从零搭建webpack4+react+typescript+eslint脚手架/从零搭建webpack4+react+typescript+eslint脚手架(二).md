@@ -1,3 +1,17 @@
+---
+title: 从零搭建webpack4+react+typescript+eslint脚手架(二)
+date: 2019/10/2 9:34:00
+updated: 2019/10/2 9:34:00
+categories: 
+- react
+tags: 
+- 工程化
+- react
+- webpack
+- typescript
+- eslint
+---
+
 # 完善webpack打包配置
 有了webpack的基础配置，还不足以支持打生产环境能够使用的包，我们还需要增加一些配置。
 
