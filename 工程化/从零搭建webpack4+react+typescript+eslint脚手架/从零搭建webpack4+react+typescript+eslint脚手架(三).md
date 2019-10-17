@@ -1,3 +1,17 @@
+---
+title: 从零搭建webpack4+react+typescript+eslint脚手架(三)
+date: 2019/10/3 15:00:00
+updated: 2019/10/3 15:00:00
+categories: 
+- react
+tags: 
+- 工程化
+- react
+- webpack
+- typescript
+- eslint
+---
+
 # 处理静态资源
 js的打包基本处理完了，还有图片、音频等静态资源需要处理。
 
