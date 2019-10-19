@@ -1,3 +1,17 @@
+---
+title: 从零搭建webpack4+react+typescript+eslint脚手架(六)
+date: 2019/10/6 16:12:00
+updated: 2019/10/6 16:12:00
+categories: 
+- react
+tags: 
+- 工程化
+- react
+- webpack
+- typescript
+- eslint
+---
+
 本篇是前文的扩展延伸。
 
 # 美化webpack输出信息

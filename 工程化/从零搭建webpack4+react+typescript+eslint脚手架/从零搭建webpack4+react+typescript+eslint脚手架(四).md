@@ -1,3 +1,17 @@
+---
+title: 从零搭建webpack4+react+typescript+eslint脚手架(四)
+date: 2019/10/4 13:05:00
+updated: 2019/10/4 13:05:00
+categories: 
+- react
+tags: 
+- 工程化
+- react
+- webpack
+- typescript
+- eslint
+---
+
 # 配置webpack开发服务器
 打包用的配置基本完成了，现在我们来配置一下开发环境。
 

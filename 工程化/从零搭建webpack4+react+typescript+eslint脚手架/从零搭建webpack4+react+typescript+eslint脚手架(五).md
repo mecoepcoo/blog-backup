@@ -1,3 +1,17 @@
+---
+title: 从零搭建webpack4+react+typescript+eslint脚手架(五)
+date: 2019/10/5 10:31:00
+updated: 2019/10/5 10:31:00
+categories: 
+- react
+tags: 
+- 工程化
+- react
+- webpack
+- typescript
+- eslint
+---
+
 这一篇主要介绍代码规范相关的内容。
 
 # eslint
