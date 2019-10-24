@@ -34,6 +34,8 @@ module.exports = {
 
 在生产环境，我们希望部署新版本后能够丢弃缓存，又希望保留没有被改动的文件的缓存，而在开发环境，我们希望完全不使用缓存，因此我们需要在当前配置的基础上，分别扩展生产和开发两套配置。
 
+<!-- more -->
+
 ```javascript
 // webpack.prod.js 生产环境打包配置
 const merge = require('webpack-merge');

@@ -41,6 +41,8 @@ module.exports = {
 };
 ```
 
+<!-- more -->
+
 然后增加开发配置：
 ```javascript
 // webpack.dev.js

@@ -43,6 +43,8 @@ tags:
 - 你了解`webpack`的基本原理或用法
 - 你有生产环境代码的开发经验，了解生产环境中的代码与自娱自乐代码的区别
 
+<!-- more -->
+
 > Why not [create-react-app](https://create-react-app.dev/)?
 > 
 > 笔者使用**CRA**新建项目时，觉得自定义程度不够。尝试过 `react-app-rewired + customize-cra` 的方案，还是觉得异常繁琐，而且会消耗额外的维护精力，**鲁迅说**：青年应当有朝气，敢作为，遂自行搭建一个 boilerplate 。

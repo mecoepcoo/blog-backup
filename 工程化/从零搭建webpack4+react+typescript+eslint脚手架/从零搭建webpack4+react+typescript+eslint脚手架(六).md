@@ -33,6 +33,8 @@ stats: {
 }
 ```
 
+<!-- more -->
+
 美化一下打包输出，安装依赖：
 ```bash
 $ npm i -D ora chalk

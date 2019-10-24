@@ -52,6 +52,8 @@ $ npm i -D @svgr/webpack # 顺带支持一下导入svg图片
 
 > tips: 生产环境需要合理使用缓存，需要拷贝一份同样的配置在`webpack.prod.js`中，并将name中的`hash`改为`contenthash`
 
+<!-- more -->
+
 接下来我们要把`public`目录里除了`index.html`以外的文件都拷贝一份到打包目录中：
 
 安装依赖：

@@ -23,6 +23,8 @@ $ npm i -D eslint babel-eslint eslint-loader eslint-plugin-jsx-control-statement
 $ npm i -D eslint-plugin-react @typescript-eslint/parser @typescript-eslint/eslint-plugin 
 ```
 
+<!-- more -->
+
 然后在根目录新建eslint配置文件`.eslintrc.js`：
 ```javascript
 module.exports = {
